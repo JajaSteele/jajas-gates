@@ -1,11 +1,7 @@
 # Jaja's Gates
  Adds some stargate variants for SGJourney
 
-# List of Gates:
-[**List + Preview of each gate**](https://jajasteele.github.io/jajas-gates/)
-- Nether Gate (looks like a fancy nether portal)
-- Oak Gate (Wooden-style oak gate with an amber Event Horizon)
-- Stone Gate (Stone-style gate with an aqua Event Horizon)
+# [List of the new gates](https://jajasteele.github.io/jajas-gates/)
 
 # Installation
 1. Download `jajasgates_resourcepack.zip` and `jajasgates_datapack.zip` from the [**Latest Release**](https://github.com/JajaSteele/jajas-gates/releases/latest)
