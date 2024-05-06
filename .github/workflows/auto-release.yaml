@@ -17,7 +17,7 @@ jobs:
       
       - uses: superjaja05/action-zip@v1
         with:
-          dest: RP.zip
+          dest: jajas_gates_resourcepack.zip
           recursive: true
           files: ./assets/jajasgates/
           
@@ -28,9 +28,9 @@ jobs:
 
       - uses: superjaja05/action-zip@v1
         with:
-          dest: DP.zip
+          dest: jajas_gates_datapack.zip
           recursive: true
-          files: ./assets/jajasgates/
+          files: ./data/jajasgates/
           
       - uses: actions/upload-artifact@v1
         with:
