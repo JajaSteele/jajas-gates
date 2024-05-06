@@ -57,7 +57,7 @@ body {
   .gate_box {
     text-align:center;
     float: left;
-    outline: solid;
+    outline: double thick;
     outline-offset: -2px;
     margin-left: 30px;
     border-radius: 32px; 
