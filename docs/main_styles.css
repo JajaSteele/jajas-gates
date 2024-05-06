@@ -18,6 +18,31 @@ body {
     font-style: normal;
     font-size: 18px;
   }
+  .link_button {
+    color: rgb(255, 255, 255);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500; 
+    font-style: normal;
+    font-size: 30px; 
+    text-decoration: underline dotted;
+  }
+  link_open {
+    color: rgb(190, 204, 214);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500; 
+    font-style: normal;
+    font-size: 30px; 
+    margin-left: 30px;
+    text-decoration: none;
+  }
+  link_close {
+    color: rgb(190, 204, 214);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500; 
+    font-style: normal;
+    font-size: 30px; 
+    text-decoration: none;
+  }
   .gate_box {
     text-align:center;
     float: left;
