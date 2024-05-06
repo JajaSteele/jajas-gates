@@ -62,8 +62,8 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            RP.zip
-            DP.zip
+            jajasgates_resourcepack.zip
+            jajasgates_datapack.zip
 
 
 
