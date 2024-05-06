@@ -1,0 +1,67 @@
+---
+name: "auto-release"
+
+on:
+  push:
+    branches:
+      - main
+      
+  workflow_dispatch:
+
+jobs:
+  auto-release:
+    name: "Latest Release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: superjaja05/action-zip@v1
+        with:
+          dest: RP.zip
+          files: ./assets/jajasgates/*
+          
+      - uses: actions/upload-artifact@v1
+        with:
+          name: resourcepack
+          path: ${{ github.workspace }}/RP.zip
+
+      - uses: superjaja05/action-zip@v1
+        with:
+          dest: DP.zip
+          files: ./assets/jajasgates/*
+          
+      - uses: actions/upload-artifact@v1
+        with:
+          name: resourcepack
+          path: ${{ github.workspace }}/DP.zip
+
+      - name: Delete tag and release
+        id: delete_release
+        uses: dev-drprasad/delete-older-releases@v0.2.0
+        with:
+          keep_latest: 0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete drafts
+        id: delete_draft
+        uses: hugo19941994/delete-draft-releases@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          name: "Auto Release"
+          tag_name: latest
+          draft: false
+          prerelease: false
+          files: |
+            RP.zip
+            DP.zip
+
+
+
