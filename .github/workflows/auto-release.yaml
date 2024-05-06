@@ -5,6 +5,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - assets/**
+      - data/**
+      - pack.mcmeta
       
   workflow_dispatch:
 
