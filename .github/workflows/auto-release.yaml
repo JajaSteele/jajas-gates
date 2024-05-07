@@ -79,7 +79,7 @@ jobs:
           files: |
             jajasgates_resourcepack.zip
             jajasgates_datapack.zip
-            jajasgates_RP_DP.zip
+            jajasgates_RP_and_DP.zip
 
 
 
