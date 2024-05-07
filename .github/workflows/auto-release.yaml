@@ -9,6 +9,7 @@ on:
       - assets/**
       - data/**
       - pack.mcmeta
+      - .github/workflows/**
       
   workflow_dispatch:
 
@@ -22,7 +23,7 @@ jobs:
       - uses: superjaja05/action-zip@v1
         with:
           dest: jajasgates_resourcepack.zip
-          recursive: true
+          recursive: false
           files: ./assets, ./pack.mcmeta
           
       - uses: actions/upload-artifact@v1
@@ -33,7 +34,7 @@ jobs:
       - uses: superjaja05/action-zip@v1
         with:
           dest: jajasgates_datapack.zip
-          recursive: true
+          recursive: false
           files: ./data, ./pack.mcmeta
           
       - uses: actions/upload-artifact@v1
@@ -44,7 +45,7 @@ jobs:
       - uses: superjaja05/action-zip@v1
         with:
           dest: jajasgates_RP_and_DP.zip
-          recursive: true
+          recursive: false
           files: jajasgates_resourcepack.zip, jajasgates_datapack.zip
 
       - uses: actions/upload-artifact@v1
