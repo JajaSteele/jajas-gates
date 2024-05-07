@@ -23,7 +23,7 @@ jobs:
         with:
           dest: jajasgates_resourcepack.zip
           recursive: true
-          files: ./assets/jajasgates/, ./pack.mcmeta
+          files: ./assets, ./pack.mcmeta
           
       - uses: actions/upload-artifact@v1
         with:
@@ -34,7 +34,7 @@ jobs:
         with:
           dest: jajasgates_datapack.zip
           recursive: true
-          files: ./data/jajasgates/, ./pack.mcmeta
+          files: ./data, ./pack.mcmeta
           
       - uses: actions/upload-artifact@v1
         with:
