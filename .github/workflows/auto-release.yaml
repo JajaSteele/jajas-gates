@@ -41,6 +41,17 @@ jobs:
           name: resourcepack
           path: ${{ github.workspace }}/jajasgates_datapack.zip
 
+      - uses: superjaja05/action-zip@v1
+        with:
+          dest: jajasgates_RP_and_DP.zip
+          recursive: true
+          files: jajasgates_resourcepack.zip, jajasgates_datapack.zip
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: resourcepack
+          path: ${{ github.workspace }}/jajasgates_RP_and_DP.zip
+
       - name: Delete tag and release
         id: delete_release
         uses: dev-drprasad/delete-older-releases@v0.2.0
@@ -68,6 +79,7 @@ jobs:
           files: |
             jajasgates_resourcepack.zip
             jajasgates_datapack.zip
+            jajasgates_RP_DP.zip
 
 
 
