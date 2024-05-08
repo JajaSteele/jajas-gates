@@ -37,6 +37,25 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .link_button_curse {
+    color: rgb(255, 194, 114);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500; 
+    font-style: normal;
+    font-size: 30px; 
+    text-decoration: none;
+    text-align:center;
+    float: left;
+    outline: solid;
+    outline-offset: -4px;
+    margin-left: 5px;
+    border-radius: 12px; 
+    outline-color: rgb(255, 124, 36);
+    padding: 6px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   link_open {
     color: rgb(190, 204, 214);
     font-family: "Fira Sans", sans-serif;
