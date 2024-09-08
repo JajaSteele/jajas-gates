@@ -4,7 +4,7 @@ name: "auto-release"
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - assets/**
       - data/**
@@ -15,7 +15,7 @@ on:
 
 jobs:
   auto-release:
-    name: "Dev Release"
+    name: "Latest Release"
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v3
@@ -73,10 +73,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: "Auto Dev Release"
-          tag_name: dev
+          name: "Auto Release"
+          tag_name: latest
           draft: false
-          prerelease: true
+          prerelease: false
           files: |
             jajasgates_resourcepack.zip
             jajasgates_datapack.zip
