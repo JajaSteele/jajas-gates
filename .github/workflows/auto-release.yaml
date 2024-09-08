@@ -15,7 +15,7 @@ on:
 
 jobs:
   auto-release:
-    name: "Latest Release"
+    name: "Dev Release"
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v3
@@ -73,8 +73,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: "Auto Release"
-          tag_name: latest
+          name: "Auto Dev Release"
+          tag_name: dev
           draft: false
           prerelease: false
           files: |
