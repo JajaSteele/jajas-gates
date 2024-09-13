@@ -26,7 +26,7 @@ jobs:
           recursive: false
           files: assets, ./pack.mcmeta
           
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v4
         with:
           name: resourcepack
           path: ${{ github.workspace }}/jajasgates_resourcepack.zip
@@ -37,7 +37,7 @@ jobs:
           recursive: false
           files: data, ./pack.mcmeta
           
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v4
         with:
           name: resourcepack
           path: ${{ github.workspace }}/jajasgates_datapack.zip
@@ -48,7 +48,7 @@ jobs:
           recursive: false
           files: jajasgates_resourcepack.zip, jajasgates_datapack.zip
 
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v4
         with:
           name: resourcepack
           path: ${{ github.workspace }}/jajasgates_RP_and_DP.zip
