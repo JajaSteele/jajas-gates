@@ -39,7 +39,7 @@ jobs:
           
       - uses: actions/upload-artifact@v4
         with:
-          name: resourcepack
+          name: datapack
           path: ${{ github.workspace }}/jajasgates_datapack.zip
 
       - uses: superjaja05/action-zip@v1
@@ -50,7 +50,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: resourcepack
+          name: rp_and_dp
           path: ${{ github.workspace }}/jajasgates_RP_and_DP.zip
 
       - name: Delete tag and release
