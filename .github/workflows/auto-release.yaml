@@ -53,6 +53,12 @@ jobs:
           name: rp_and_dp
           path: ${{ github.workspace }}/jajasgates_RP_and_DP.zip
 
+      - uses: superjaja05/action-zip@v1
+        with:
+          dest: jajasgates_kubejs.zip
+          recursive: false
+          files: assets, data
+
       - name: Delete tag and release
         id: delete_release
         uses: dev-drprasad/delete-older-releases@v0.2.0
@@ -81,6 +87,7 @@ jobs:
             jajasgates_resourcepack.zip
             jajasgates_datapack.zip
             jajasgates_RP_and_DP.zip
+            jajasgates_kubejs.zip
 
 
 
